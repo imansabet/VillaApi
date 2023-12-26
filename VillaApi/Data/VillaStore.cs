@@ -1,0 +1,16 @@
+﻿using System.Xml.Linq;
+using VillaApi.Models.DTO;
+
+namespace VillaApi.Data
+{
+    public static class VillaStore
+    {
+        public static new List<VillaDTO> villaList = new List<VillaDTO>
+        { 
+            new VillaDTO{ Id = 1, Name = "Pool View"},
+            new VillaDTO{ Id = 2, Name = "Beach View"},
+        };
+                    
+
+    }
+}
