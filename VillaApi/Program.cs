@@ -1,4 +1,5 @@
 using Serilog;
+using VillaApi.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddControllers(option=> {
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<ILogging,Logging>();
+
 
 var app = builder.Build();
 
